@@ -10,7 +10,7 @@
   grid-template-columns: repeat(2,1fr);
   grid-template-rows: 230px 96px 96px 230px;
   padding: 10px;
-  background-image: url(/images/cover-image-dark.png);
+  background-image: var(--cover-image-dark);
   background-position: center;
   background-size: cover;
 }
@@ -21,7 +21,7 @@
   position: absolute;
   top: 10px;
   right: 19px;
-  font-family: 'IBM Plex Mono', sans-serif;
+  font-family: var(--main-font);
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -48,13 +48,13 @@
 .header__theme-menu-button{
   background: none;
   border: 0;
-  font-family: 'IBM Plex Mono', sans-serif;
+  font-family: var(--main-font);
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 18px;
   text-align: center;
-  color: #FF0070;
+  color: var(--menu-button-color);
   text-transform: lowercase;
   margin-block-end: 10px;
   margin-inline-end: 10px;
@@ -62,7 +62,7 @@
 }
 
 .header__theme-menu-button_active{
-  border: 1px solid #FF0070;
+  border: 1px solid var(--menu-button-color);
   pointer-events: none;
 }
 
@@ -70,8 +70,11 @@
   grid-row-start:2 ;
   grid-row-end: 4;
   grid-column: span 2;
+}
+
+.title-focus{
   text-shadow: 4px 4px 0 var(--accent-color-shadow);
-  font-family: 'IBM Plex Mono', sans-serif;
+  font-family: var(--main-font);
   font-style: normal;
   font-weight: 700;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
@@ -85,12 +88,79 @@
   margin-block-start: 55px;
   margin-block-end: 55px;
   line-height:23px;
+  font-size: 18px;
 }
 
 .title-decor{
-  font-family: 'IBM Plex Mono',sans-serif;
+  font-family: var(--main-font);
   font-style: normal;
   font-weight: 700;
   color:var(--title-decor-color);
   background-color: var(--title-decor-bg);
+}
+
+.main{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  margin-inline:10px;
+}
+
+.main__section{
+  grid-column: span 2;
+}
+
+.main__section:last-of-type{
+  margin-block-start: 50px;
+}
+
+.main__section-question{
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  color:var(--section-question-color);
+  margin-block: 40px 20px;
+}
+
+.main__section-title{
+  margin-block-end: 10px;
+}
+
+.main__section-title-answer{
+  font-style: normal;
+  font-weight: 400;
+  margin-block-end: 10px;
+}
+
+.main__section-answer{
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  color:var(--section-answer-color);
+}
+
+.main__section-answer:not(:last-child){
+  margin-block-end: 20px;
+}
+
+.link{
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--link-shadow)
+}
+
+.main__section-image{
+  width: calc(100vw - 20px);
+}
+
+.main__section-image:not(:last-of-type){
+  margin-block: 3px;
+}
+
+
+.footer__title{
+  text-align: center;
+  margin-block: 286px;
 }
