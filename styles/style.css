@@ -2,4 +2,95 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  background: var(--page-bg-color);
+}
+
+.decorated-zone{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: 230px 96px 96px 230px;
+  padding: 10px;
+  background-image: url(/images/cover-image-dark.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.header__REC{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 10px;
+  right: 19px;
+  font-family: 'IBM Plex Mono', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: #FF0070;
+}
+
+.header__REC::after{
+  content: '';
+  width: 9px; 
+  height: 9px;
+  border-radius: 50%;
+  background-color: #FF0070;
+  box-shadow: 0px 0px 4px 2px #FF0070;
+  margin-left: 10px;
+}
+
+.header__theme-menu{
+  grid-row:1 ;
+  grid-column: 2;
+  justify-self: end;
+  align-self: center;
+}
+
+.header__theme-menu-button{
+  background: none;
+  border: 0;
+  font-family: 'IBM Plex Mono', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+  color: #FF0070;
+  text-transform: lowercase;
+  margin-block-end: 10px;
+  margin-inline-end: 10px;
+  padding-inline: 13px;
+}
+
+.header__theme-menu-button_active{
+  border: 1px solid #FF0070;
+  pointer-events: none
+}
+
+.header__title{
+  grid-row-start:2 ;
+  grid-row-end: 4;
+  grid-column: span 2;
+  text-shadow: 4px 4px 0 var(--accent-color-shadow);
+  font-family: 'IBM Plex Mono', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  color: var(--accent-color);
+  line-height: 6rem;
+}
+
+.header__paragraph{
+  grid-row:4 ;
+  grid-column: span 2;
+  margin-block-start: 55px;
+  margin-block-end: 55px;
+  line-height:23px;
+}
+
+.title-decor{
+  font-family: 'IBM Plex Mono',sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color:var(--title-decor-color);
+  background-color: var(--title-decor-bg);
 }

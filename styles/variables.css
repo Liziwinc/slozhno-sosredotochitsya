@@ -2,3 +2,12 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+/* Файл variables.css */
+:root {
+  --accent-color: #DB00FF;
+  --accent-color-shadow: #ff0070;
+  --title-decor-bg: #FF0070;
+  --title-decor-color: #000028;
+  --page-bg-color:#000028;
+}
+
