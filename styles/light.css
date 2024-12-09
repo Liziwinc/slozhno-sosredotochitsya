@@ -18,6 +18,9 @@
   --link-shadow:#FF8DCB;
 }
 
+.page.theme_light rec {
+  display: none;
+}
 
 @media (prefers-color-scheme: light) {
 :root {
@@ -33,7 +36,8 @@
   --section-answer-color: #353430;
   --link-shadow:#FF8DCB;
   }
-  .header__REC{
+
+  rec {
     display: none;
   }
 }
