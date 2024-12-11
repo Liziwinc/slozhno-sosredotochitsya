@@ -45,7 +45,7 @@
   border-left: 1px solid var(--menu-button-color, #ff0070);
 }
 
-rec {
+.rec {
   z-index: 2;
   display: flex;
   align-items: center;
@@ -59,7 +59,7 @@ rec {
   color: #ff0070;
 }
 
-rec::after {
+.rec::after {
   content: "";
   width: 9px;
   height: 9px;
@@ -97,6 +97,17 @@ rec::after {
   pointer-events: none;
 }
 
+.header__theme-menu-button:hover {
+  border: 1px solid var(--menu-button-color);
+  opacity: 0.4;
+}
+
+.header__theme-menu-button:focus {
+  opacity: 1;
+  border: 0;
+  border-bottom: 1px solid var(--menu-button-color);
+}
+
 .header__title {
   grid-row-start: 2;
   grid-row-end: 4;
@@ -131,13 +142,16 @@ rec::after {
 }
 
 .main {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
   margin-inline: 10px;
 }
 
 .main__section {
   grid-column: span 2;
+  margin-block-start: 46px;
+}
+
+.main__section:first-of-type{
+margin-block-start: 40px;
 }
 
 .card {
@@ -155,8 +169,9 @@ rec::after {
   font-size: 18px;
   line-height: 23px;
   color: var(--section-question-color);
-  margin-block: 40px 20px;
+  margin-block-end: 20px;
 }
+
 
 .main__section-title {
   margin-block-end: 10px;
@@ -166,6 +181,7 @@ rec::after {
   font-style: normal;
   font-weight: 400;
   margin-block-end: 10px;
+  font-size: 18px;
 }
 
 .main__section-answer {
@@ -173,7 +189,7 @@ rec::after {
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
-  line-height: 23px;
+  line-height: 23.2px;
   color: var(--section-answer-color);
 }
 
@@ -184,6 +200,14 @@ rec::after {
 .link {
   text-decoration: none;
   text-shadow: 2px 2px 0 var(--link-shadow);
+}
+
+.link:hover {
+  border-bottom:1px solid var(--section-answer-color);
+}
+
+.link:focus {
+  border: 1px solid var(--section-answer-color);
 }
 
 .gallery__item {
@@ -210,7 +234,7 @@ rec::after {
   position: relative;
 }
 
-@media (width >= 768px)  {
+@media (width >= 768px) {
   .decorated-zone {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 6rem 1fr;
@@ -218,7 +242,7 @@ rec::after {
     padding-left: 0;
   }
 
-  rec {
+  .rec {
     top: 22px;
     right: 29px;
   }
@@ -231,6 +255,7 @@ rec::after {
 
   .title-focus {
     padding: 0;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   .header__paragraph {
@@ -256,12 +281,22 @@ rec::after {
     display:block;
   }
 
+  .card{
+  margin-block-end: 0px;
+  }
+
   .main__section-question {
     margin: 0;
   }
 
-  .why-hard {
+  .main__section:first-of-type {
     margin-block-start: 60px;
+  }
+
+  .main__section:last-of-type {
+    margin-block-start: 70px;
+  }
+  .why-hard {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 20px;
@@ -280,16 +315,17 @@ rec::after {
     grid-template-rows: repeat(4, min-content);
     gap: 20px;
   }
-  .whats-problem:first-child {
-    width: 33%;
+
+  .whats-problem .main__section-question {
+    display: block;
+    width: 30%;
   }
   
-
   .how-to-do {
     margin-block-start: 85px;
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: 2em repeat(6, min-content);
+    grid-template-rows: 1.4em repeat(6, min-content);
     gap: 20px;
   }
   .how-to-do .main__section-question {
@@ -302,7 +338,7 @@ rec::after {
   .gallery-img {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr) 1.383fr;
+    grid-template-rows: 0.835fr 1fr 1.383fr;
     gap: 20px;
     box-sizing: border-box;
     grid-auto-flow: dense;
@@ -352,14 +388,25 @@ rec::after {
 }
 
 @media (width >= 1024px) {
+  .decorated-zone {
+    padding-block-start: 10px;
+  }
+
   .header__theme-menu {
     grid-row: 1;
     grid-column: span 2;
     justify-self: center;
     align-self: start;
   }
-  .header__theme-menu-list{
+  .header__theme-menu-list {
     display: flex;
+    gap: 10px;
+    margin-inline-start: 19px;
+    margin-block-start: 3px;
+  }
+
+  .header__paragraph {
+    margin-block-start: 66px;
   }
 
   .whats-problem {
@@ -385,5 +432,19 @@ rec::after {
   .whats-problem:nth-child(4) {
     grid-row:2;
     grid-column: 3/4;
+  }
+
+  .how-to-do {
+    margin-block-start: 80px;
+    gap: 21px;
+  }
+
+  .main__section:last-of-type {
+    margin-block-start: 60px;
+  }
+
+  .gallery-img {
+    grid-template-rows: 0.825fr 1fr 1.358fr;
+    margin-block-start: 20px;
   }
 }

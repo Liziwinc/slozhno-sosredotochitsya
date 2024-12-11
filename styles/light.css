@@ -18,7 +18,7 @@
   --link-shadow:#FF8DCB;
 }
 
-.page.theme_light rec {
+.page.theme_light .rec {
   display: none;
 }
 
@@ -37,7 +37,7 @@
   --link-shadow:#FF8DCB;
   }
 
-  rec {
+  .rec {
     display: none;
   }
 }
