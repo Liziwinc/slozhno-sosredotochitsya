@@ -1,10 +1,9 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  background: var(--page-bg-color);
+  background: var(--page-bg-color,#000028);
   background-attachment: fixed;
-  background-image: var(--cover-image-dark);
+  background-image: var(--cover-image-dark, url(/images/cover-image-dark.png));
   background-position: center;
   background-size: cover;
 }
@@ -52,7 +51,7 @@
   position: absolute;
   top: 12px;
   right: 19px;
-  font-family: var(--main-font);
+  font-family: var(--main-font, sans-serif);
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -79,13 +78,13 @@
 .header__theme-menu-button {
   background: none;
   border: 0;
-  font-family: var(--main-font);
+  font-family: var(--main-font, sans-serif);
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 18px;
   text-align: center;
-  color: var(--menu-button-color);
+  color: var(--menu-button-color, #ff0070);
   text-transform: lowercase;
   margin-block: 5px;
   padding: 4px 10px;
@@ -93,19 +92,19 @@
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid var(--menu-button-color);
+  border: 1px solid var(--menu-button-color, #ff0070);
   pointer-events: none;
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid var(--menu-button-color);
+  border: 1px solid var(--menu-button-color, #ff0070);
   opacity: 0.4;
 }
 
 .header__theme-menu-button:focus {
   opacity: 1;
   border: 0;
-  border-bottom: 1px solid var(--menu-button-color);
+  border-bottom: 1px solid var(--menu-button-color, #ff0070);
 }
 
 .header__title {
@@ -115,12 +114,12 @@
 }
 
 .title-focus {
-  text-shadow: 4px 4px 0 var(--accent-color-shadow);
-  font-family: var(--main-font);
+  text-shadow: 4px 4px 0 var(--accent-color-shadow,  #ff0070);
+  font-family: var(--main-font, sans-serif);
   font-style: normal;
   font-weight: 700;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  color: var(--accent-color);
+  color: var(--accent-color, #DB00FF);
   line-height: 6rem;
 }
 
@@ -134,11 +133,11 @@
 }
 
 .title-decor {
-  font-family: var(--main-font);
+  font-family: var(--main-font, sans-serif);
   font-style: normal;
   font-weight: 700;
-  color: var(--title-decor-color);
-  background-color: var(--title-decor-bg);
+  color: var(--title-decor-color, #000028);
+  background-color: var(--title-decor-bg, #FF0070);
 }
 
 .main {
@@ -163,12 +162,12 @@
 }
 
 .main__section-question {
-  font-family: var(--main-font);
+  font-family: var(--main-font, sans-serif);
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 23px;
-  color: var(--section-question-color);
+  color: var(--section-question-color, #FF0070 );
   margin-block-end: 20px;
 }
 
@@ -186,12 +185,12 @@
 }
 
 .main__section-answer {
-  font-family: var(--main-font);
+  font-family: var(--main-font, sans-serif);
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 23.2px;
-  color: var(--section-answer-color);
+  color: var(--section-answer-color, #F1B2CE);
 }
 
 .main__section-answer:not(:last-child) {
@@ -200,15 +199,15 @@
 
 .link {
   text-decoration: none;
-  text-shadow: 2px 2px 0 var(--link-shadow);
+  text-shadow: 2px 2px 0 var(--link-shadow, #FF0070);
 }
 
 .link:hover {
-  border-bottom: 1px solid var(--section-answer-color);
+  border-bottom: 1px solid var(--section-answer-color, #F1B2CE);
 }
 
 .link:focus {
-  border: 1px solid var(--section-answer-color);
+  border: 1px solid var(--section-answer-color, #F1B2CE);
 }
 
 .gallery__item {
