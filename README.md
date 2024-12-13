@@ -1,1 +1,1 @@
-https://github.com/Liziwinc/slozhno-sosredotochitsya
+https://github.com/Liziwinc/slozhno-sosredotochitsya-fd
