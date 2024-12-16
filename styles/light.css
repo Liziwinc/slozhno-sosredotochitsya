@@ -12,6 +12,7 @@
   --page-bg-color:#fff1f7;
   --cover-image-dark:url(/images/cover-image-light.png);
   --menu-button-color:#353430;
+  --menu-button-hover: #35343066;
   --main-font:'IBM Plex Mono', sans-serif;
   --section-question-color:#353430;
   --section-answer-color: #353430;
@@ -31,6 +32,7 @@
   --page-bg-color:#fff1f7;
   --cover-image-dark:url(/images/cover-image-light.png);
   --menu-button-color:#353430;
+  --menu-button-hover: #35343066;
   --main-font:'IBM Plex Mono', sans-serif;
   --section-question-color:#353430;
   --section-answer-color: #353430;

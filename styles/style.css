@@ -1,7 +1,7 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  background: var(--page-bg-color,#000028);
+  background: var(--page-bg-color, #000028);
   background-attachment: fixed;
   background-image: var(--cover-image-dark, url(/images/cover-image-dark.png));
   background-position: center;
@@ -97,11 +97,10 @@
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid var(--menu-button-color, #ff0070);
-  opacity: 0.4;
+  outline: solid 1px var(--menu-button-hover, #ff006f66);
 }
 
-.header__theme-menu-button:focus {
+.header__theme-menu-button:focus-visible {
   opacity: 1;
   border: 0;
   border-bottom: 1px solid var(--menu-button-color, #ff0070);
@@ -114,12 +113,12 @@
 }
 
 .title-focus {
-  text-shadow: 4px 4px 0 var(--accent-color-shadow,  #ff0070);
+  text-shadow: 4px 4px 0 var(--accent-color-shadow, #ff0070);
   font-family: var(--main-font, sans-serif);
   font-style: normal;
   font-weight: 700;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  color: var(--accent-color, #DB00FF);
+  color: var(--accent-color, #db00ff);
   line-height: 6rem;
 }
 
@@ -137,7 +136,7 @@
   font-style: normal;
   font-weight: 700;
   color: var(--title-decor-color, #000028);
-  background-color: var(--title-decor-bg, #FF0070);
+  background-color: var(--title-decor-bg, #ff0070);
 }
 
 .main {
@@ -167,15 +166,14 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 23px;
-  color: var(--section-question-color, #FF0070 );
+  color: var(--section-question-color, #ff0070);
   margin-block-end: 20px;
 }
 
-
 .main__section-title {
   margin-block-end: 10px;
+  font-size: 18px;
 }
-
 
 .main__section-title-answer {
   font-style: normal;
@@ -189,8 +187,9 @@
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
-  line-height: 23.2px;
-  color: var(--section-answer-color, #F1B2CE);
+  line-height: 23.4px;
+  letter-spacing: 0;
+  color: var(--section-answer-color, #f1b2ce);
 }
 
 .main__section-answer:not(:last-child) {
@@ -199,15 +198,15 @@
 
 .link {
   text-decoration: none;
-  text-shadow: 2px 2px 0 var(--link-shadow, #FF0070);
+  text-shadow: 2px 2px 0 var(--link-shadow, #ff0070);
 }
 
 .link:hover {
-  border-bottom: 1px solid var(--section-answer-color, #F1B2CE);
+  border-bottom: 1px solid var(--section-answer-color, #f1b2ce);
 }
 
-.link:focus {
-  border: 1px solid var(--section-answer-color, #F1B2CE);
+.link:focus-visible {
+  border: 1px solid var(--section-answer-color, #f1b2ce);
 }
 
 .gallery__item {
@@ -227,11 +226,13 @@
 .footer__title {
   text-align: center;
   padding-block: 286px;
+  line-height: 82.5%;
 }
 
 .footer {
   height: 100vh;
   position: relative;
+  margin-block-start: 40px;
 }
 
 @media (width >=768px) {
@@ -248,9 +249,7 @@
   }
 
   .header__title {
-    grid-row-start: 2;
     grid-row-end: 3;
-    grid-column: span 2;
   }
 
   .title-focus {
@@ -294,21 +293,26 @@
   }
 
   .main__section:last-of-type {
-    margin-block-start: 70px;
+    margin-block-start: 75px;
   }
 
   .why-hard {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: 20px;
   }
 
   .why-hard .main__section-question {
+    width: 90%;
     grid-column: 1;
   }
 
   .why-hard .card {
     grid-column: 2;
+    margin-left: 15px;
+  }
+
+  .why-hard .card:not(:last-of-type) {
+    margin-bottom: 20px;
   }
 
   .whats-problem {
@@ -325,11 +329,10 @@
   }
 
   .how-to-do {
-    margin-block-start: 85px;
+    margin-block-start: 80px;
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1.4em repeat(6, min-content);
-    gap: 20px;
   }
 
   .how-to-do .main__section-question {
@@ -338,6 +341,15 @@
 
   .how-to-do .card {
     grid-column: 2;
+    margin-left: 15px;
+  }
+
+  .how-to-do .card:not(:last-of-type) {
+    margin-bottom: 20px;
+  }
+
+  .how-to-do .card:nth-of-type(2) {
+    margin-top: 20px;
   }
 
   .gallery-img {
@@ -356,9 +368,6 @@
 
   .gallery__image {
     inline-size: 100%;
-    block-size: 100%;
-    max-block-size: 100%;
-    object-fit: cover;
   }
 
   .gallery__item:nth-child(1) {
@@ -384,6 +393,11 @@
   .gallery__item:nth-child(5) {
     grid-column: 2 / 4;
     grid-row: 3;
+  }
+
+  .footer {
+    margin-block-start: 60px;
+    padding-right: 0;
   }
 
   .footer .footer__title {
@@ -415,6 +429,10 @@
     margin-block-start: 66px;
   }
 
+  .why-hard .card {
+    margin-left: 10px;
+  }
+
   .whats-problem {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -442,17 +460,23 @@
     grid-column: 3/4;
   }
 
-  .how-to-do {
-    margin-block-start: 80px;
-    gap: 21px;
+  .how-to-do .main__section-question {
+    padding-top: 3px;
   }
 
-  .main__section:last-of-type {
-    margin-block-start: 60px;
+  .how-to-do .card {
+    margin-left: 9px;
   }
 
   .gallery-img {
     grid-template-rows: 0.825fr 1fr 1.358fr;
     margin-block-start: 20px;
+  }
+
+  .footer {
+    margin-block-start: 50px;
+    padding-right: 0;
+    padding-top: 0px;
+    padding-bottom: 30px;
   }
 }
