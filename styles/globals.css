@@ -1,10 +1,12 @@
-/* Глобальные стили для проекта, их можно дополнять и менять по желанию */
-
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+*:focus{
   outline: none;
+  border:none;
 }
 
 body {

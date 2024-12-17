@@ -1,5 +1,3 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
   background: var(--page-bg-color, #000028);
   background-attachment: fixed;
@@ -144,6 +142,7 @@
 }
 
 .main__section {
+  display: grid;
   grid-column: span 2;
   margin-block-start: 56px;
 }
@@ -226,7 +225,7 @@
 .footer__title {
   text-align: center;
   padding-block: 286px;
-  line-height: 82.5%;
+  line-height: 99px;
 }
 
 .footer {
@@ -297,7 +296,6 @@
   }
 
   .why-hard {
-    display: grid;
     grid-template-columns: 1fr 2fr;
   }
 
@@ -317,7 +315,6 @@
 
   .whats-problem {
     margin-block-start: 85px;
-    display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, min-content);
     gap: 20px;
@@ -330,7 +327,6 @@
 
   .how-to-do {
     margin-block-start: 80px;
-    display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1.4em repeat(6, min-content);
   }
@@ -434,7 +430,6 @@
   }
 
   .whats-problem {
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: min-content 1fr;
   }
