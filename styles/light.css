@@ -4,7 +4,7 @@
   --title-decor-bg: #FF8DCB;
   --title-decor-color: #353430;
   --page-bg-color:#fff1f7;
-  --cover-image-dark:url(/images/cover-image-light.png);
+  --cover-image-dark:url(../images/cover-image-light.png);
   --menu-button-color:#353430;
   --menu-button-hover: #35343066;
   --main-font:'IBM Plex Mono', sans-serif;
@@ -24,7 +24,7 @@
   --title-decor-bg: #FF8DCB;
   --title-decor-color: #353430;
   --page-bg-color:#fff1f7;
-  --cover-image-dark:url(/images/cover-image-light.png);
+  --cover-image-dark:url(../images/cover-image-light.png);
   --menu-button-color:#353430;
   --menu-button-hover: #35343066;
   --main-font:'IBM Plex Mono', sans-serif;

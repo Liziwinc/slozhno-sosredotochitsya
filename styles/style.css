@@ -1,7 +1,7 @@
 .page {
   background: var(--page-bg-color, #000028);
   background-attachment: fixed;
-  background-image: var(--cover-image-dark, url(/images/cover-image-dark.png));
+  background-image: var(--cover-image-dark, url(../images/cover-image-dark.png));
   background-position: center;
   background-size: cover;
 }
@@ -96,6 +96,10 @@
 
 .header__theme-menu-button:hover {
   outline: solid 1px var(--menu-button-hover, #ff006f66);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
 }
 
 .header__theme-menu-button:focus-visible {
@@ -202,6 +206,10 @@
 
 .link:hover {
   border-bottom: 1px solid var(--section-answer-color, #f1b2ce);
+}
+
+.link:focus {
+  outline: none;
 }
 
 .link:focus-visible {

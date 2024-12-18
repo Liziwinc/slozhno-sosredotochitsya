@@ -4,7 +4,7 @@
   --title-decor-bg: #FF0070;
   --title-decor-color: #000028;
   --page-bg-color:#000028;
-  --cover-image-dark:url(/images/cover-image-dark.png);
+  --cover-image-dark:url(../images/cover-image-dark.png);
   --menu-button-color:#ff0070;
   --menu-button-hover: #ff006f66;
   --main-font:'IBM Plex Mono';

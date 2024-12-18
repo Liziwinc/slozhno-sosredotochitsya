@@ -4,11 +4,6 @@
   box-sizing: border-box;
 }
 
-*:focus{
-  outline: none;
-  border:none;
-}
-
 body {
   min-inline-size: 375px;
   max-inline-size: 1440px;
